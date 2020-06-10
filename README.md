@@ -1,7 +1,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 bloom
 =====
-
+** Forking Jim Hester's Bloom repo for maintenance and feature enhancement **
 Scaling, counting Bloom filter for R using Rcpp bindings for [dablooms](https://github.com/bitly/dablooms/).
 
 Note the dablooms implementation requires an additional metadata id for insertions and deletions. This id is a monotonically increasing integer which is used to determine which scaling filter the item should be added or removed from.
