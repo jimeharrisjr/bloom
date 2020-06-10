@@ -4,7 +4,7 @@ Title: Bloom Filters
 Description: Scaling, counting Bloom filter for R using Rcpp bindings for
     dablooms.
 Version: 0.2.0
-Date: 2014-12-04
+Date: 2020-06-10
 Author: Jim Hester
 Maintainer: Jim Harris <jimeharrisjr@gmail.com>
 License: MIT + file LICENSE
@@ -13,4 +13,5 @@ Imports:
 LinkingTo: Rcpp
 Depends:
     Rcpp
+StagedInstall: no
 RoxygenNote: 7.1.0
