@@ -38,3 +38,19 @@ rm(bloom)
 bloom <- bloom(capacity = 1000, error_rate = .05, filename = "/tmp/bloom.bin", exists = TRUE)
 bloom$contains("foo")
 ```
+
+
+Or use the new wraparound functions:
+
+
+```{r}
+library(bloom)
+bloomf<-bloom_create(capacity=2000, error_rate=0.05, filename='/tmp/bloom.bin')
+t<-unlist(strsplit('this is a test',' '))
+bloom_add(bloomf, t)
+bloom_contains(bloomf,t)
+bloom_remove(bloomf,'this',1)
+bloom_contains(bloomf, t)
+```
+
+
