@@ -2,7 +2,7 @@
 bloom
 =====
 ### Forking Jim Hester's Bloom repo for maintenance and feature enhancement
-WARNING: This is still buggy, and unexpectedly crashes in Rstudio. 
+WARNING: This _might_ still be buggy, and crash in Rstudio, but avoiding recursive stack overflow seems to have helped
 
 Scaling, counting Bloom filter for R using Rcpp bindings for [dablooms](https://github.com/bitly/dablooms/).
 
