@@ -93,7 +93,7 @@ bloom_add<-function(bl,x,n=1:length(x)){
 #' bloomf<-bloom_create(capacity=2000, error_rate=0.05, filename='/tmp/bloom.bin')
 #' t<-unlist(strsplit('this is a test',' '))
 #' bloom_add(bloomf, t)
-#' bloom_contains(bl,'this')
+#' bloom_contains(bloomf,'this')
 bloom_contains<-function(bl,x){
   unlist(lapply(x, function(y){bl$contains(y)}))
 }
@@ -111,7 +111,7 @@ bloom_contains<-function(bl,x){
 #' bloomf<-bloom_create(capacity=2000, error_rate=0.05, filename='/tmp/bloom.bin')
 #' t<-unlist(strsplit('this is a test',' '))
 #' bloom_add(bloomf, t)
-#' bloom_contains(bl,t)
+#' bloom_contains(bloomf,t)
 #' bloom_remove(bloomf,'this',1)
 #' bloom_add(bloomf, t)
 bloom_remove<-function(bl,x,n){
