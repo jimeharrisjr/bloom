@@ -75,7 +75,7 @@ bloom_add<-function(bl,x,n=1:length(x)){
   if(length(x)!=length(n)){ stop('x and n must be the same length')}
   if (length(x)>1){
     i<-1
-    lapply(x,function(y){bl$add(y,n[i]);i<<-i+1})
+    unlist(lapply(x,function(y){bl$add(y,n[i]);i<<-i+1}))
   } else {
     bl$add(x,n)
   }
@@ -118,7 +118,7 @@ bloom_remove<-function(bl,x,n){
   if(length(x)!=length(n)){ stop('x and n must be the same length')}
   if (length(x)>1){
     i<-1
-    lapply(x,function(y){bl$remove(y,n[i]);i<<-i+1})
+    unlist(lapply(x,function(y){bl$remove(y,n[i]);i<<-i+1}))
   } else {
     bl$remove(x,n)
   }
