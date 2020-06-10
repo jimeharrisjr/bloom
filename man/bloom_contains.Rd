@@ -22,5 +22,5 @@ library(bloom)
 bloomf<-bloom_create(capacity=2000, error_rate=0.05, filename='/tmp/bloom.bin')
 t<-unlist(strsplit('this is a test',' '))
 bloom_add(bloomf, t)
-bloom_contains(bl,'this')
+bloom_contains(bloomf,'this')
 }

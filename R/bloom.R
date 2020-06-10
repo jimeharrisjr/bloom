@@ -74,8 +74,8 @@ bloom_create<-function(capacity = 1000,
 bloom_add<-function(bl,x,n=1:length(x)){
   if(length(x)!=length(n)){ stop('x and n must be the same length')}
   if (length(x)>1){
-    bl$add(x[1],n[1])
-    bloom_add(bl,x[2:length(x)],n[2:length(n)])
+    i<-1
+    lapply(x,function(y){bl$add(y,n[i]);i<<-i+1})
   } else {
     bl$add(x,n)
   }
@@ -117,8 +117,8 @@ bloom_contains<-function(bl,x){
 bloom_remove<-function(bl,x,n){
   if(length(x)!=length(n)){ stop('x and n must be the same length')}
   if (length(x)>1){
-    bl$remove(x[1],n[1])
-    bloom_remove(bl,x[2:length(x)],n[2:length(n)])
+    i<-1
+    lapply(x,function(y){bl$remove(y,n[i]);i<<-i+1})
   } else {
     bl$remove(x,n)
   }

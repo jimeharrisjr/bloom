@@ -26,5 +26,5 @@ t<-unlist(strsplit('this is a test',' '))
 bloom_add(bloomf, t)
 bloom_contains(bloomf,t)
 bloom_remove(bloomf,'this',1)
-bloom_contains(bloomf, t)
+bloom_add(bloomf, t)
 }
